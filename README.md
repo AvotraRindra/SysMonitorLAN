@@ -4,7 +4,7 @@
 
 SysMonitor LAN permet à un poste administrateur **Windows** de contrôler les ressources de plusieurs machines virtuelles ou ordinateurs **Linux** (Kali Linux, Debian, Ubuntu, etc.) à travers un réseau local. Le programme affiche les mesures du **processeur (CPU)**, de la **mémoire RAM** et de l'**espace disque**, détecte les dépassements de seuils et enregistre un historique.
 
-Le projet est développé en **langage C**, avec un collecteur **Shell Bash (`.sh`)** exécuté à distance grâce à **SSH**. Il n'utilise **ni Python, ni fichier PowerShell `.ps1`**. Il s'agit d'un projet pédagogique d'administration système et réseau (niveau L1), conçu pour un laboratoire de petite taille.
+Le projet est développé en **langage C**, avec un collecteur **Shell Bash (`.sh`)** exécuté à distance grâce à **SSH**. Il s'agit d'un projet pédagogique d'administration système et réseau (niveau L1), conçu pour un laboratoire de petite taille.
 
 ## Fonctionnalités
 
@@ -83,7 +83,7 @@ Cette option exécute **un seul cycle** et revient ensuite au menu. Elle convien
 
 ### 2 — Surveiller en continu
 
-SysMonitor répète le diagnostic de toutes les machines à intervalles réguliers (15 secondes par défaut entre deux cycles complets). Il affiche les changements d'état et conserve les résultats dans les journaux.
+SysMonitor répète le diagnostic de toutes les machines à intervalles réguliers (5 secondes par défaut entre deux cycles complets). Il affiche les changements d'état et conserve les résultats dans les journaux.
 
 Pour arrêter la surveillance, utilisez **`Ctrl+C`** : cela interrompt l'application et ramène à l'invite de commandes Windows. Relancez `SysMonitor.exe` pour retrouver le menu.
 
