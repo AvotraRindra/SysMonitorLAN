@@ -1,0 +1,28 @@
+# Binaires Windows / Linux
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.out
+*.log
+*.tmp
+# Donnees de fonctionnement
+logs/*
+!logs/.gitkeep
+# OS / editeurs
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Config avec IP privees ? Example config est public, eviter secrets
+.env
+*.key
+id_ed25519
+id_rsa
+
+# Protections supplementaires SSH
+*.pem
+*.pub
+authorized_keys
+known_hosts

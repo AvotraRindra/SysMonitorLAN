@@ -1,0 +1,11 @@
+name: Tests SysMonitor LAN Option B
+on: [push, pull_request]
+jobs:
+  tests-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collecteur Bash
+        run: bash tests/test_collector.sh
+      - name: Tests C + simulation SSH
+        run: bash tests/test_integration.sh

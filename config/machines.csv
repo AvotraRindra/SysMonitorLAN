@@ -1,0 +1,4 @@
+# NOM;UTILISATEUR_LINUX;IPv4;PORT_SSH
+# Aucun poste impose : utilisez SysMonitor.exe --setup au premier lancement.
+
+kali;rindra;192.168.43.219;22

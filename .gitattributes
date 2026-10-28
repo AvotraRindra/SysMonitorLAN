@@ -1,0 +1,7 @@
+* text=auto
+*.sh text eol=lf
+*.c text eol=lf
+*.bat text eol=crlf
+*.md text eol=lf
+*.conf text eol=lf
+*.csv text eol=lf
