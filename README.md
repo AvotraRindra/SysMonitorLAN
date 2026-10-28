@@ -168,7 +168,7 @@ Les paramètres de **`config/settings.conf`** comprennent :
 | `CPU_THRESHOLD` | `85` | Seuil d'alerte CPU (%) |
 | `RAM_THRESHOLD` | `85` | Seuil d'alerte RAM (%) |
 | `DISK_THRESHOLD` | `85` | Seuil d'alerte disque (%) |
-| `INTERVAL_SECONDS` | `15` | Pause entre les cycles complets (secondes) |
+| `INTERVAL_SECONDS` | `5` | Pause entre les cycles complets (secondes) |
 | `SSH_TIMEOUT_SECONDS` | `6` | Délai de connexion SSH (secondes) |
 | `ENABLE_SOUND` | `1` | Notification sonore Windows (`1` oui / `0` non) |
 
@@ -208,10 +208,6 @@ SysMonitorLAN/
 │   └── settings.conf        # Seuils et paramètres
 ├── logs/                    # Historique local (généré à l'exécution)
 ├── tests/                   # Tests C/Bash et scénarios simulés
-├── docs/
-│   ├── INSTALLATION.md      # Guide de configuration détaillé
-│   ├── ARCHITECTURE.md      # Description technique
-│   └── TESTS.md             # Procédure de validation
 ├── SECURITY.md              # Précautions de sécurité
 └── LICENSE                  # Licence du projet
 ```
@@ -230,15 +226,3 @@ Le script `linux/collect.sh` est **transmis par SSH à l'exécution**. Il n'est 
 | `Connection timed out` | Contrôler l'adresse IP et la configuration du réseau virtuel |
 | `Host key verification failed` | Vérifier l'empreinte depuis Linux et corriger la configuration de confiance sans désactiver la vérification |
 | Aucune alerte sonore | Vérifier les réglages audio Windows et `ENABLE_SOUND` ; l'alerte visuelle reste disponible |
-
-## Sécurité et limites
-
-SysMonitor est destiné à la supervision de **machines dont vous êtes administrateur ou pour lesquelles vous disposez d'une autorisation**. Les mots de passe et les clés privées SSH ne doivent jamais être ajoutés à GitHub ; les fichiers générés et les journaux sont ignorés par `.gitignore`.
-
-Cette version est destinée à un **petit environnement de laboratoire** (jusqu'à 32 machines configurées). Elle supervise des hôtes Linux depuis Windows, mais **ne mesure pas les ressources du PC Windows lui-même**. Les connexions SSH sont traitées successivement, sans tableau de bord graphique. Les notifications sonores dépendent des réglages du système.
-
-Pour aller plus loin, consultez [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/INSTALLATION.md`](docs/INSTALLATION.md) et [`SECURITY.md`](SECURITY.md).
-
-## Licence
-
-Ce projet est diffusé sous licence **MIT**. Voir le fichier [`LICENSE`](LICENSE).
